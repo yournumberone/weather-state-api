@@ -13,7 +13,15 @@ module Api
       end
     end
 
-    def by_time; end
+    def by_time
+      array = find_city.weathers.currents
+      if array.size.positive? && params[:timestamp]
+        closest = (array.sort_by { |weather| p (weather.created_at.to_i - params[:timestamp]).abs }).first
+        render json: closest.current
+      else
+        render json: { 404 => 'Not Found' }
+      end
+    end
 
     private
 

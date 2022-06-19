@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     get 'health', to: 'api#health'
     get 'weather/current', to: 'weather#current'
-    get 'weather/by_tyme', to: 'weather#by_tyme'
+    get 'weather/by_time', to: 'weather#by_time'
     namespace :weather do
       get 'historical/min', to: 'historical#min'
       get 'historical/max', to: 'historical#max'
