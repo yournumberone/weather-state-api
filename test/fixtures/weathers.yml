@@ -1,11 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  current: 
+  current: recent
   city: one
-  historical: 
+  historical:
+  created_at: <%= 10.minute.ago.to_s(:db) %>
+  updated_at: <%= 10.minute.ago.to_s(:db) %>
 
 two:
-  current: 
-  city: two
-  historical: 
+  current: early
+  city: one
+  historical:
+  created_at: <%= 40.minute.ago.to_s(:db) %>
+  updated_at: <%= 40.minute.ago.to_s(:db) %>

@@ -1,36 +1,27 @@
 # frozen_string_literal: true
 
 module Api
+  # current weather
   class WeatherController < Api::ApplicationController
+    # caches_action :current, layout: false, cache_path: proc { |c| c.request.url }, expires_in: 30.minutes
+
     def current
-      city = find_city
-      if city.weather_current?('current')
-        render json: city.weathers.last.current
-      else
-        fresh = clone_current
-        city.weathers.create(current: fresh)
-        render json: fresh
+      @data = Rails.cache.fetch("current/#{params[:city]}", expires_in: 30.minutes) do
+        city = find_city
+        UpdateCurrentWeatherJob.perform_now(city) unless city.weather_current?('current')
+        city.weathers.currents.last.current
       end
+      render json: @data
     end
 
     def by_time
-      array = find_city.weathers.currents
-      if array.size.positive? && params[:timestamp]
-        closest = (array.sort_by { |weather| p (weather.created_at.to_i - params[:timestamp]).abs }).first
-        render json: closest.current
+      city = find_city
+      closest = city.closest(params[:timestamp])
+      if closest.nil?
+        render json: { 404 => 'Not Found' }, status: :not_found
       else
-        render json: { 404 => 'Not Found' }
+        render json: closest.current
       end
-    end
-
-    private
-
-    def clone_current
-      base_uri = "http://dataservice.accuweather.com/currentconditions/v1/#{set_location}"
-      headers = { 'Accept-Encoding' => 'gzip', 'Content-Type' => 'application/json; charset=utf-8' }
-      query = { 'apikey' => ENV.fetch('ACCUWEATHER_KEY'), 'language' => 'ru-ru', 'details' => 'true' }
-      result = HTTParty.get(base_uri, query:, headers:)
-      result.body
     end
   end
 end

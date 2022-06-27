@@ -53,6 +53,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
@@ -76,3 +78,9 @@ end
 gem 'dotenv-rails', '~> 2.7'
 
 gem 'httparty', '~> 0.20.0'
+
+gem 'rufus-scheduler'
+
+gem 'actionpack-action_caching'
+
+gem 'minitest-power_assert'

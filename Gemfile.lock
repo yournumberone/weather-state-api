@@ -33,6 +33,8 @@ GEM
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.2.0)
+    actionpack-action_caching (1.2.2)
+      actionpack (>= 4.0.0)
     actiontext (7.0.2.3)
       actionpack (= 7.0.2.3)
       activerecord (= 7.0.2.3)
@@ -83,6 +85,8 @@ GEM
       xpath (~> 3.2)
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     debug (1.5.0)
       irb (>= 1.3.6)
@@ -93,8 +97,14 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
+    et-orbi (1.2.7)
+      tzinfo
+    fugit (1.5.3)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     httparty (0.20.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -122,6 +132,9 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.15.0)
+    minitest-power_assert (0.3.1)
+      minitest
+      power_assert (>= 1.1)
     msgpack (1.5.1)
     multi_xml (0.6.0)
     net-imap (0.2.3)
@@ -141,9 +154,11 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
+    power_assert (2.0.1)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.6.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -180,6 +195,8 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    rufus-scheduler (3.8.1)
+      fugit (~> 1.1, >= 1.1.6)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -202,6 +219,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    vcr (6.1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -211,6 +229,10 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -222,6 +244,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  actionpack-action_caching
   bootsnap
   capybara
   debug
@@ -229,16 +252,20 @@ DEPENDENCIES
   httparty (~> 0.20.0)
   importmap-rails
   jbuilder
+  minitest-power_assert
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
+  rufus-scheduler
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
+  vcr
   web-console
   webdrivers
+  webmock
 
 RUBY VERSION
    ruby 3.1.0p0

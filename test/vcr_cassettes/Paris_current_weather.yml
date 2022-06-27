@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/locations/v1/623?apikey={apikey}&language=ru-ru
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 27 Jun 2022 09:21:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Request-Context:
+      - appId=cid-v1:cc223195-bccf-4201-9cde-374567896e20
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '39'
+      X-Location-Key:
+      - '623'
+      X-Gmt-Offset:
+      - '2'
+      X-Location-Stem:
+      - fr/paris/623
+      X-Station-Code:
+      - LFPW
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Cache-Control:
+      - public, max-age=86350
+      Expires:
+      - Tue, 28 Jun 2022 09:20:27 GMT
+      Akamai-Grn:
+      - 0.ce68dc17.1656321677.126c6610
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - Ruby
+      X-Forwarded-For:
+      - 95.152.62.180
+      X-Forwarded-Port:
+      - '80'
+      X-Forwarded-Proto:
+      - http
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJWZXJzaW9uIjoxLCJLZXkiOiI2MjMiLCJUeXBlIjoiQ2l0eSIsIlJhbmsiOjIwLCJMb2NhbGl6ZWROYW1lIjoi0J/QsNGA0LjQtiIsIkVuZ2xpc2hOYW1lIjoiUGFyaXMiLCJQcmltYXJ5UG9zdGFsQ29kZSI6IiIsIlJlZ2lvbiI6eyJJRCI6IkVVUiIsIkxvY2FsaXplZE5hbWUiOiLQldCy0YDQvtC/0LAiLCJFbmdsaXNoTmFtZSI6IkV1cm9wZSJ9LCJDb3VudHJ5Ijp7IklEIjoiRlIiLCJMb2NhbGl6ZWROYW1lIjoi0KTRgNCw0L3RhtC40Y8iLCJFbmdsaXNoTmFtZSI6IkZyYW5jZSJ9LCJBZG1pbmlzdHJhdGl2ZUFyZWEiOnsiSUQiOiI3NSIsIkxvY2FsaXplZE5hbWUiOiLQn9Cw0YDQuNC2IiwiRW5nbGlzaE5hbWUiOiJWaWxsZSBkZSBQYXJpcyIsIkxldmVsIjoxLCJMb2NhbGl6ZWRUeXBlIjoi0JTQtdC/0LDRgNGC0LDQvNC10L3RgiIsIkVuZ2xpc2hUeXBlIjoiRGVwYXJ0bWVudCIsIkNvdW50cnlJRCI6IkZSIn0sIlRpbWVab25lIjp7IkNvZGUiOiJDRVNUIiwiTmFtZSI6IkV1cm9wZS9QYXJpcyIsIkdtdE9mZnNldCI6Mi4wLCJJc0RheWxpZ2h0U2F2aW5nIjp0cnVlLCJOZXh0T2Zmc2V0Q2hhbmdlIjoiMjAyMi0xMC0zMFQwMTowMDowMFoifSwiR2VvUG9zaXRpb24iOnsiTGF0aXR1ZGUiOjQ4Ljg1NywiTG9uZ2l0dWRlIjoyLjM1MSwiRWxldmF0aW9uIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MzUuMCwiVW5pdCI6Im0iLCJVbml0VHlwZSI6NX0sIkltcGVyaWFsIjp7IlZhbHVlIjoxMTQuMCwiVW5pdCI6ImZ0IiwiVW5pdFR5cGUiOjB9fX0sIklzQWxpYXMiOmZhbHNlLCJTdXBwbGVtZW50YWxBZG1pbkFyZWFzIjpbeyJMZXZlbCI6MiwiTG9jYWxpemVkTmFtZSI6Ikkg0L7QutGA0YPQsyDQn9Cw0YDQuNC20LAiLCJFbmdsaXNoTmFtZSI6IlBhcmlzIn1dLCJEYXRhU2V0cyI6WyJBaXJRdWFsaXR5Q3VycmVudENvbmRpdGlvbnMiLCJBaXJRdWFsaXR5Rm9yZWNhc3RzIiwiQWxlcnRzIiwiRGFpbHlQb2xsZW5Gb3JlY2FzdCIsIkZvcmVjYXN0Q29uZmlkZW5jZSIsIkZ1dHVyZVJhZGFyIiwiTWludXRlQ2FzdCIsIlJhZGFyIl19
+  recorded_at: Mon, 27 Jun 2022 09:21:17 GMT
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/currentconditions/v1/623?apikey={apikey}&details=true&language=ru-ru
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 27 Jun 2022 09:21:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/10.0
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '38'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Cache-Control:
+      - public, max-age=600
+      Expires:
+      - Mon, 27 Jun 2022 09:31:18 GMT
+      Akamai-Grn:
+      - 0.ce68dc17.1656321678.126c6b4d
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - Ruby
+      X-Forwarded-For:
+      - 95.152.62.180
+      X-Forwarded-Port:
+      - '80'
+      X-Forwarded-Proto:
+      - http
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siTG9jYWxPYnNlcnZhdGlvbkRhdGVUaW1lIjoiMjAyMi0wNi0yN1QxMToxNzowMCswMjowMCIsIkVwb2NoVGltZSI6MTY1NjMyMTQyMCwiV2VhdGhlclRleHQiOiLQndC10LHQvtC70YzRiNCw0Y8g0L7QsdC70LDRh9C90L7RgdGC0YwiLCJXZWF0aGVySWNvbiI6MywiSGFzUHJlY2lwaXRhdGlvbiI6ZmFsc2UsIlByZWNpcGl0YXRpb25UeXBlIjpudWxsLCJJc0RheVRpbWUiOnRydWUsIlRlbXBlcmF0dXJlIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTcuMCwiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NjMuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiUmVhbEZlZWxUZW1wZXJhdHVyZSI6eyJNZXRyaWMiOnsiVmFsdWUiOjE4LjUsIlVuaXQiOiJDIiwiVW5pdFR5cGUiOjE3LCJQaHJhc2UiOiLQn9GA0LjRj9GC0L3QviJ9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NjUuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTgsIlBocmFzZSI6ItCf0YDQuNGP0YLQvdC+In19LCJSZWFsRmVlbFRlbXBlcmF0dXJlU2hhZGUiOnsiTWV0cmljIjp7IlZhbHVlIjoxNi4yLCJVbml0IjoiQyIsIlVuaXRUeXBlIjoxNywiUGhyYXNlIjoi0J/RgNC+0YXQu9Cw0LTQvdC+In0sIkltcGVyaWFsIjp7IlZhbHVlIjo2MS4wLCJVbml0IjoiRiIsIlVuaXRUeXBlIjoxOCwiUGhyYXNlIjoi0J/RgNC+0YXQu9Cw0LTQvdC+In19LCJSZWxhdGl2ZUh1bWlkaXR5Ijo2NiwiSW5kb29yUmVsYXRpdmVIdW1pZGl0eSI6NTUsIkRld1BvaW50Ijp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTAuNywiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NTEuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiV2luZCI6eyJEaXJlY3Rpb24iOnsiRGVncmVlcyI6MjI1LCJMb2NhbGl6ZWQiOiLQrtCXIiwiRW5nbGlzaCI6IlNXIn0sIlNwZWVkIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTAuMCwiVW5pdCI6ImttL2giLCJVbml0VHlwZSI6N30sIkltcGVyaWFsIjp7IlZhbHVlIjo2LjIsIlVuaXQiOiJtaS9oIiwiVW5pdFR5cGUiOjl9fX0sIldpbmRHdXN0Ijp7IlNwZWVkIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTcuNywiVW5pdCI6ImttL2giLCJVbml0VHlwZSI6N30sIkltcGVyaWFsIjp7IlZhbHVlIjoxMS4wLCJVbml0IjoibWkvaCIsIlVuaXRUeXBlIjo5fX19LCJVVkluZGV4IjoyLCJVVkluZGV4VGV4dCI6ItCd0LjQt9C6LiIsIlZpc2liaWxpdHkiOnsiTWV0cmljIjp7IlZhbHVlIjoxNi4xLCJVbml0Ijoia20iLCJVbml0VHlwZSI6Nn0sIkltcGVyaWFsIjp7IlZhbHVlIjoxMC4wLCJVbml0IjoibWkiLCJVbml0VHlwZSI6Mn19LCJPYnN0cnVjdGlvbnNUb1Zpc2liaWxpdHkiOiIiLCJDbG91ZENvdmVyIjo1MCwiQ2VpbGluZyI6eyJNZXRyaWMiOnsiVmFsdWUiOjYxMC4wLCJVbml0IjoibSIsIlVuaXRUeXBlIjo1fSwiSW1wZXJpYWwiOnsiVmFsdWUiOjIwMDAuMCwiVW5pdCI6ImZ0IiwiVW5pdFR5cGUiOjB9fSwiUHJlc3N1cmUiOnsiTWV0cmljIjp7IlZhbHVlIjoxMDE4LjEsIlVuaXQiOiJtYiIsIlVuaXRUeXBlIjoxNH0sIkltcGVyaWFsIjp7IlZhbHVlIjozMC4wNiwiVW5pdCI6ImluSGciLCJVbml0VHlwZSI6MTJ9fSwiUHJlc3N1cmVUZW5kZW5jeSI6eyJMb2NhbGl6ZWRUZXh0Ijoi0J/QvtGB0YLQvtGP0L3QvdC+0LUiLCJDb2RlIjoiUyJ9LCJQYXN0MjRIb3VyVGVtcGVyYXR1cmVEZXBhcnR1cmUiOnsiTWV0cmljIjp7IlZhbHVlIjoyLjIsIlVuaXQiOiJDIiwiVW5pdFR5cGUiOjE3fSwiSW1wZXJpYWwiOnsiVmFsdWUiOjQuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiQXBwYXJlbnRUZW1wZXJhdHVyZSI6eyJNZXRyaWMiOnsiVmFsdWUiOjE4LjMsIlVuaXQiOiJDIiwiVW5pdFR5cGUiOjE3fSwiSW1wZXJpYWwiOnsiVmFsdWUiOjY1LjAsIlVuaXQiOiJGIiwiVW5pdFR5cGUiOjE4fX0sIldpbmRDaGlsbFRlbXBlcmF0dXJlIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTcuMiwiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NjMuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiV2V0QnVsYlRlbXBlcmF0dXJlIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTMuNiwiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NTYuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiUHJlY2lwMWhyIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MC4wLCJVbml0IjoibW0iLCJVbml0VHlwZSI6M30sIkltcGVyaWFsIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJpbiIsIlVuaXRUeXBlIjoxfX0sIlByZWNpcGl0YXRpb25TdW1tYXJ5Ijp7IlByZWNpcGl0YXRpb24iOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fSwiUGFzdEhvdXIiOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fSwiUGFzdDNIb3VycyI6eyJNZXRyaWMiOnsiVmFsdWUiOjAuMCwiVW5pdCI6Im1tIiwiVW5pdFR5cGUiOjN9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6MC4wLCJVbml0IjoiaW4iLCJVbml0VHlwZSI6MX19LCJQYXN0NkhvdXJzIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MC4wLCJVbml0IjoibW0iLCJVbml0VHlwZSI6M30sIkltcGVyaWFsIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJpbiIsIlVuaXRUeXBlIjoxfX0sIlBhc3Q5SG91cnMiOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fSwiUGFzdDEySG91cnMiOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fSwiUGFzdDE4SG91cnMiOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fSwiUGFzdDI0SG91cnMiOnsiTWV0cmljIjp7IlZhbHVlIjowLjAsIlVuaXQiOiJtbSIsIlVuaXRUeXBlIjozfSwiSW1wZXJpYWwiOnsiVmFsdWUiOjAuMCwiVW5pdCI6ImluIiwiVW5pdFR5cGUiOjF9fX0sIlRlbXBlcmF0dXJlU3VtbWFyeSI6eyJQYXN0NkhvdXJSYW5nZSI6eyJNaW5pbXVtIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MTQuMiwiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NTguMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fSwiTWF4aW11bSI6eyJNZXRyaWMiOnsiVmFsdWUiOjE3LjAsIlVuaXQiOiJDIiwiVW5pdFR5cGUiOjE3fSwiSW1wZXJpYWwiOnsiVmFsdWUiOjYzLjAsIlVuaXQiOiJGIiwiVW5pdFR5cGUiOjE4fX19LCJQYXN0MTJIb3VyUmFuZ2UiOnsiTWluaW11bSI6eyJNZXRyaWMiOnsiVmFsdWUiOjE0LjIsIlVuaXQiOiJDIiwiVW5pdFR5cGUiOjE3fSwiSW1wZXJpYWwiOnsiVmFsdWUiOjU4LjAsIlVuaXQiOiJGIiwiVW5pdFR5cGUiOjE4fX0sIk1heGltdW0iOnsiTWV0cmljIjp7IlZhbHVlIjoxNy4wLCJVbml0IjoiQyIsIlVuaXRUeXBlIjoxN30sIkltcGVyaWFsIjp7IlZhbHVlIjo2My4wLCJVbml0IjoiRiIsIlVuaXRUeXBlIjoxOH19fSwiUGFzdDI0SG91clJhbmdlIjp7Ik1pbmltdW0iOnsiTWV0cmljIjp7IlZhbHVlIjoxNC4yLCJVbml0IjoiQyIsIlVuaXRUeXBlIjoxN30sIkltcGVyaWFsIjp7IlZhbHVlIjo1OC4wLCJVbml0IjoiRiIsIlVuaXRUeXBlIjoxOH19LCJNYXhpbXVtIjp7Ik1ldHJpYyI6eyJWYWx1ZSI6MjEuNSwiVW5pdCI6IkMiLCJVbml0VHlwZSI6MTd9LCJJbXBlcmlhbCI6eyJWYWx1ZSI6NzEuMCwiVW5pdCI6IkYiLCJVbml0VHlwZSI6MTh9fX19LCJNb2JpbGVMaW5rIjoiaHR0cDovL3d3dy5hY2N1d2VhdGhlci5jb20vcnUvZnIvcGFyaXMvNjIzL2N1cnJlbnQtd2VhdGhlci82MjMiLCJMaW5rIjoiaHR0cDovL3d3dy5hY2N1d2VhdGhlci5jb20vcnUvZnIvcGFyaXMvNjIzL2N1cnJlbnQtd2VhdGhlci82MjMifV0=
+  recorded_at: Mon, 27 Jun 2022 09:21:18 GMT
+recorded_with: VCR 6.1.0
